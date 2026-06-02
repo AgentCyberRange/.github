@@ -12,6 +12,12 @@
   <a href="https://github.com/cage-org/post-exploitation-range">Post-Exploitation Bench</a>
 </p>
 
+<p align="center">
+  <img src="./assets/table_compare.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
+</p>
+
+Existing cybersecurity-agent benchmarks often capture only part of the story: puzzle-style challenges, known vulnerability reproduction, or one-off exploit attempts. We built CAGE and PentestBench because real authorized security testing is a longer process. It asks an agent to explore, gain access, continue from that access, and leave evidence that can be checked and compared.
+
 ---
 
 ## What is CAGE?
