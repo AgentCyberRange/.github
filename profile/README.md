@@ -1,36 +1,39 @@
 <p align="center">
-  <strong>CAGE: Cybersecurity Agent Gym & Evaluation</strong>
+  <strong> 🎯 AgentCyberRange: Benchmarking LLM Agents on Realistic Cyber Attacks </strong>
 </p>
 
 <p align="center">
-  Building reproducible benchmarks and runtime infrastructure for evaluating autonomous agents on realistic cybersecurity tasks.
+  Web exploitation benchmarks, post-exploitation cyber ranges, and a unified evaluation framework.
 </p>
 
 <p align="center">
-  <a href="https://github.com/cage-org/cage">Framework</a> ·
-  <a href="https://github.com/cage-org/pentest_bench">PentestBench</a> ·
-  <a href="https://github.com/cage-org/post-exploitation-range">Post-Exploitation Bench</a>
+  <a href="https://github.com/AgentCyberRange/CAGE">CAGE Pipeline</a> ·
+  <a href="https://github.com/AgentCyberRange/WebExploitBench">WebExploitBench</a> ·
+  <a href="https://github.com/AgentCyberRange/PostExploitBench">PostExploitBench</a> .
 </p>
 
 ---
 
-## What is CAGE?
+## What is AgentCyberRange?
 
-CAGE is an open-source evaluation stack for measuring how autonomous agents behave in controlled cybersecurity environments.
+AgentCyberRange is an open-source project for evaluating LLM-based agents on realistic cyber attacks. It covers the main attack stages from web-facing exploitation to internal post-exploitation, and provides the execution framework needed to run these benchmarks across different agents and models.
 
-The project connects three layers that are usually fragmented:
+- ⚙️ **CAGE**: parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
+- 🧪 **WebExploitBench**: evaluates web-facing exploration and exploitation over realistic web applications.
+- 📊 **PostExploitBench**: evaluates post-exploitation across enterprise-like cyber ranges.
+  parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
 
-- 🧪 **Benchmarks** for external pentesting, CVE exploitation, CTF-style tasks, and post-exploitation scenarios.
-- ⚙️ **Runtime infrastructure** for agent execution, target lifecycle management, model proxying, scoring, resume, and inspection.
-- 📊 **Evaluation workflows** that turn large runs into auditable traces, dashboards, and benchmark-specific reports.
+<p align="center">
+  <img src="./assets/overview.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
+</p>
 
-CAGE is built for researchers and engineers who need more than a toy benchmark: isolated targets, repeatable runs, model-call traces, failure analysis, and clear scoring artifacts.
+## Why AgentCyberRange?
+
+Most benchmarks stop at one checkpoint. AgentCyberRange follows the attack path: find the web entry, exploit it, use the foothold, and move through the internal range. CAGE makes this path measurable at scale through parallel, isolated, and verifiable agent runs.
 
 <p align="center">
   <img src="./assets/table_compare.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
 </p>
-
-The table is here to answer a simple question: what do current security-agent benchmarks leave out? Many useful benchmarks test one slice of the job: solve a challenge, reproduce a known bug, or run an exploit. PentestBench asks the agent to do what a tester actually does: start from the outside, find a way in, keep going after access, and leave evidence someone else can check. CAGE is the framework for running those tests the same way across agents.
 
 ---
 
@@ -38,87 +41,55 @@ The table is here to answer a simple question: what do current security-agent be
 
 <table>
   <tr>
-    <td width="28%"><strong>⚙️ <a href="https://github.com/cage-org/cage">cage</a></strong></td>
+    <td width="28%"><strong>⚙️ <a href="https://github.com/AgentCyberRange/CAGE">CAGE</a></strong></td>
     <td>
-      The core framework for running cybersecurity-agent evaluations. It manages experiment configs, agents, Dockerized targets, model proxy logs, scoring, resumable runs, and the inspection web UI.
+      CAGE is the shared infrastructure layer for large-scale agent evaluation. It fans out agent × model × benchmark × prompt level × pass-k trials, runs them in parallel, and keeps each target isolated and resettable.
       <br><br>
-      <strong>Start here if you want to run experiments, inspect results, or build a new benchmark.</strong>
     </td>
   </tr>
   <tr>
-    <td><strong>🎯 <a href="https://github.com/cage-org/pentest_bench">pentest_bench</a></strong></td>
+    <td><strong>🎯 <a href="https://github.com/AgentCyberRange/WebExploitBench">WebExploitBench</a></strong></td>
     <td>
-      The main external penetration-testing benchmark. It evaluates agents on public-facing attack surfaces, web exploitation workflows, prompt levels, pass-k runs, and benchmark-owned scoring.
+      Benchmark for web-facing cyber attacks. Includes <strong>110 vulnerabilities</strong> across realistic web applications, covering zero-day, one-day, and synthetic vulnerabilities embedded in application workflows. 
       <br><br>
-      <strong>Start here if you want to evaluate agents on realistic pentest tasks.</strong>
     </td>
   </tr>
   <tr>
-    <td><strong>🕸️ <a href="https://github.com/cage-org/post-exploitation-range">post-exploitation-range</a></strong></td>
+    <td><strong>🕸️ <a href="https://github.com/AgentCyberRange/PostExploitBench">PostExploitBench</a></strong></td>
     <td>
-      Target ranges and task assets for internal and post-exploitation evaluation: foothold usage, host discovery, privilege escalation, lateral movement, and multi-step operational reasoning.
+      Benchmark for internal post-exploitation. Includes <strong>156 hosts</strong> in enterprise-like ranges, covering tunneling, privilege escalation, credential reuse, lateral movement, persistence, and defense evasion.
       <br><br>
-      <strong>Start here if you care about what agents do after initial compromise.</strong>
     </td>
   </tr>
 </table>
 
 ---
 
-## Repository Map
-
-| Repository | Focus | Role |
-|---|---|---|
-| [`cage`](https://github.com/cage-org/cage) | Runtime, proxy, agents, scoring, dashboard, operations | Core framework |
-| [`pentest_bench`](https://github.com/cage-org/pentest_bench) | External penetration-testing tasks | Primary benchmark |
-| [`post-exploitation-range`](https://github.com/cage-org/post-exploitation-range) | Internal range and post-exploitation scenarios | Primary benchmark asset |
-| [`CVE-Bench`](https://github.com/cage-org/CVE-Bench) | Vulnerability-specific exploitation tasks | Benchmark suite |
-| [`NYUCTF-Bench`](https://github.com/cage-org/NYUCTF-Bench) | CTF-style security challenges | Benchmark suite |
-| [`AutoPenbench`](https://github.com/cage-org/AutoPenbench) | Automated pentest benchmark assets and experiments | Research assets |
-
----
-
 ## Where Should I Start?
 
-### I want to run an existing benchmark
+### I want to evaluate web exploitation ability
 
-Start with [`cage`](https://github.com/cage-org/cage).
+Start with [`WebExploitBench`](https://github.com/AgentCyberRange/WebExploitBench), then run it through [`CAGE`](https://github.com/AgentCyberRange/CAGE).
 
-You will configure models, prepare benchmark data, run a small smoke experiment, and inspect results through the CAGE web UI.
-
-### I want to evaluate pentesting agents
-
-Start with [`pentest_bench`](https://github.com/cage-org/pentest_bench), then run it through [`cage`](https://github.com/cage-org/cage).
-
-PentestBench focuses on external attack workflows: web targets, prompt levels, repeated passes, scoring artifacts, and dashboard summaries.
+This track tests whether an agent can explore a realistic web application, identify exploitable routes and parameters, and produce PoCs that trigger verifier-observable effects.
 
 ### I want to evaluate post-exploitation ability
 
-Start with [`post-exploitation-range`](https://github.com/cage-org/post-exploitation-range).
+Start with [`PostExploitBench`](https://github.com/AgentCyberRange/PostExploitBench), then run it through [`CAGE`](https://github.com/AgentCyberRange/CAGE).
 
-This repository covers the internal-range side of evaluation: whether an agent can reason beyond a single public-facing vulnerability.
+This track tests whether an agent can use a foothold, pivot through constrained networks, compromise additional hosts, and make progress under realistic internal-range conditions.
 
-### I want to build a new benchmark
+### I want to run or compare agents
 
-Start with the benchmark-authoring docs in [`cage`](https://github.com/cage-org/cage).
+Start with [`CAGE`](https://github.com/AgentCyberRange/CAGE).
 
-CAGE benchmarks define target setup, prompts, scoring, dashboards, and experiment configuration through a common framework.
-
----
-
-## What We Care About
-
-- **Reproducibility**: isolated targets, explicit run IDs, structured artifacts.
-- **Observability**: model request logs, proxy traces, trial metadata, dashboard views.
-- **Scalability**: pass-k runs, worker pools, resumable experiments, failure recovery.
-- **Realism**: multi-step targets, benchmark-owned scoring, and operational task structure.
-- **Auditability**: enough evidence to explain success, failure, and model behavior.
+CAGE provides the common execution layer for configuring models, launching agents, deploying benchmark targets, collecting model-call traces, resuming runs, verifying results, and inspecting failures.
 
 ---
 
 ## Documentation
 
-Most user and developer documentation lives in [`cage`](https://github.com/cage-org/cage):
+Most user and developer documentation lives in [`CAGE`](https://github.com/AgentCyberRange/CAGE):
 
 - **Getting Started**: clone, model setup, dataset setup, first run.
 - **Running Experiments**: `project.yml`, dry runs, small/full runs, resume, dashboard inspection.
@@ -130,12 +101,4 @@ Most user and developer documentation lives in [`cage`](https://github.com/cage-
 
 ## Responsible Use
 
-CAGE is intended for controlled research and evaluation environments.
-
-Only run agents against systems you own or have explicit permission to test. Benchmark targets should be isolated, disposable, and operated in accordance with applicable laws and policies.
-
----
-
-## Project Status
-
-CAGE is under active development. APIs, benchmark schemas, and datasets may change as the evaluation stack matures.
+AgentCyberRange is intended for controlled research and evaluation environments. Only run agents against systems you own or have explicit permission to test. Benchmark targets should be isolated, disposable, and operated in accordance with applicable laws and policies.
