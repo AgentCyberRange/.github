@@ -32,7 +32,7 @@ AgentCyberRange is an open-source project for evaluating LLM-based agents on rea
 Most benchmarks stop at one checkpoint. AgentCyberRange follows the attack path: find the web entry, exploit it, use the foothold, and move through the internal range. CAGE makes this path measurable at scale through parallel, isolated, and verifiable agent runs.
 
 <p align="center">
-  <img src="./assets/table_compare.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
+  <img src="./assets/compare.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
 </p>
 
 ---
