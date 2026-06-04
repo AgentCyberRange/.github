@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/AgentCyberRange/CAGE">CAGE Pipeline</a> ·
   <a href="https://github.com/AgentCyberRange/WebExploitBench">WebExploitBench</a> ·
-  <a href="https://github.com/AgentCyberRange/PostExploitBench">PostExploitBench</a> .
+  <a href="https://github.com/AgentCyberRange/PostExploitBench">PostExploitBench</a>
 </p>
 
 ---
