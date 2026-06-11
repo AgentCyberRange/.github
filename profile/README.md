@@ -1,27 +1,26 @@
 <p align="center">
-  <strong> 🎯 AgentCyberRange: Benchmarking LLM Agents on Realistic Cyber Attacks </strong>
+  <strong> 🎯 AgentCyberRange: Benchmarking AI Agents on Realistic Cyber Attacks </strong>
 </p>
 
 <p align="center">
-  Web exploitation benchmarks, post-exploitation cyber ranges, and a unified evaluation framework.
+  Web exploitation benchmarks, Post-exploitation cyber ranges, and a unified evaluation framework.
 </p>
 
 <p align="center">
-  <a href="https://github.com/AgentCyberRange/CAGE">CAGE Pipeline</a> ·
   <a href="https://github.com/AgentCyberRange/WebExploitBench">WebExploitBench</a> ·
-  <a href="https://github.com/AgentCyberRange/PostExploitBench">PostExploitBench</a>
+  <a href="https://github.com/AgentCyberRange/PostExploitBench">PostExploitBench</a> ·
+  <a href="https://github.com/AgentCyberRange/CAGE">CAGE Pipeline</a> 
 </p>
 
 ---
 
 ## What is AgentCyberRange?
 
-AgentCyberRange is an open-source project for evaluating LLM-based agents on realistic cyber attacks. It covers the main attack stages from web-facing exploitation to internal post-exploitation, and provides the execution framework needed to run these benchmarks across different agents and models.
+AgentCyberRange is an open-source project for evaluating AI agents on realistic cyberattacks. It covers the main attack stages from web-facing exploitation to internal post-exploitation, and provides the execution framework needed to run these benchmarks across different agents and models.
 
-- ⚙️ **CAGE**: parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
 - 🌐 **WebExploitBench**: evaluates web-facing exploration and exploitation over realistic web applications.
-- 🕸️ **PostExploitBench**: evaluates post-exploitation across enterprise-like cyber ranges.
-  parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
+- 🕸️ **PostExploitBench**: evaluates post-exploitation techniques across enterprise-like cyber ranges.
+- ⚙️ **CAGE**: parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
 
 <p align="center">
   <img src="./assets/overview.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
@@ -65,7 +64,7 @@ The results show that frontier agents can already solve a non-trivial fraction o
     <td>
       Benchmark for web-facing cyber attacks. Includes <strong>110 vulnerabilities</strong> across realistic web applications, covering zero-day, one-day, and synthetic vulnerabilities embedded in application workflows. 
       <br><br>
-      <strong>📦 Complete dataset: this GitHub repository releases only a subset of WebExploitBench. The complete dataset is available on <a href="https://huggingface.co/datasets/AgentCyberRange/WebExploitBench">Hugging Face</a></strong>.
+      <strong>📦 Complete dataset: This GitHub repository releases only a subset of WebExploitBench. The complete dataset is available on <a href="https://huggingface.co/datasets/AgentCyberRange/WebExploitBench">Hugging Face</a></strong>.
       <br><br>
     </td>
   </tr>
@@ -74,7 +73,7 @@ The results show that frontier agents can already solve a non-trivial fraction o
     <td>
       Benchmark for internal post-exploitation. Includes <strong>156 hosts</strong> in enterprise-like ranges, covering tunneling, privilege escalation, credential reuse, lateral movement, persistence, and defense evasion.
       <br><br>
-      <strong>📦 Complete dataset: this GitHub repository releases only a subset of PostExploitBench. The complete dataset is available on <a href="https://huggingface.co/datasets/AgentCyberRange/PostExploitBench">Hugging Face</a></strong>.
+      <strong>📦 Complete dataset: This GitHub repository releases only a subset of PostExploitBench. The complete dataset is available on <a href="https://huggingface.co/datasets/AgentCyberRange/PostExploitBench">Hugging Face</a></strong>.
       <br><br>
     </td>
   </tr>
@@ -115,6 +114,12 @@ Most user and developer documentation lives in [`CAGE`](https://github.com/Agent
 - **Operations**: Docker cleanup, orphaned resources, run IDs, large-run monitoring.
 
 ---
+
+## About Us
+Nuwa Frontier AI Safety Lab
+http://whitzard.tech/nuwa
+
+--- 
 
 ## Responsible Use
 
