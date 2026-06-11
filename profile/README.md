@@ -19,8 +19,8 @@
 AgentCyberRange is an open-source project for evaluating LLM-based agents on realistic cyber attacks. It covers the main attack stages from web-facing exploitation to internal post-exploitation, and provides the execution framework needed to run these benchmarks across different agents and models.
 
 - ⚙️ **CAGE**: parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
-- 🧪 **WebExploitBench**: evaluates web-facing exploration and exploitation over realistic web applications.
-- 📊 **PostExploitBench**: evaluates post-exploitation across enterprise-like cyber ranges.
+- 🌐 **WebExploitBench**: evaluates web-facing exploration and exploitation over realistic web applications.
+- 🕸️ **PostExploitBench**: evaluates post-exploitation across enterprise-like cyber ranges.
   parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
 
 <p align="center">
@@ -34,6 +34,19 @@ Most benchmarks stop at one checkpoint. AgentCyberRange follows the attack path:
 <p align="center">
   <img src="./assets/compare.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
 </p>
+
+---
+
+
+## Reference Evaluation Results
+
+AgentCyberRange evaluates AI agents across two realistic cyber-attack tasks: web-facing exploitation and internal post-exploitation. The benchmark uses multiple difficulty levels to measure how agents perform with different amounts of task information.
+
+<p align="center">
+  <img src="./assets/main_result.png" alt="Agent performance on WebExploitBench and PostExploitBench" width="845">
+</p>
+
+The results show that frontier agents can already solve a non-trivial fraction of realistic cyber-attack tasks, especially when given more task-specific information. However, success rates remain far from complete, indicating that reliable end-to-end autonomous compromise is still challenging.
 
 ---
 
@@ -52,12 +65,16 @@ Most benchmarks stop at one checkpoint. AgentCyberRange follows the attack path:
     <td>
       Benchmark for web-facing cyber attacks. Includes <strong>110 vulnerabilities</strong> across realistic web applications, covering zero-day, one-day, and synthetic vulnerabilities embedded in application workflows. 
       <br><br>
+      <strong>📦 Complete dataset: this GitHub repository releases only a subset of WebExploitBench. The complete dataset is available on <a href="https://huggingface.co/datasets/AgentCyberRange/WebExploitBench">Hugging Face</a></strong>.
+      <br><br>
     </td>
   </tr>
   <tr>
     <td><strong>🕸️ <a href="https://github.com/AgentCyberRange/PostExploitBench">PostExploitBench</a></strong></td>
     <td>
       Benchmark for internal post-exploitation. Includes <strong>156 hosts</strong> in enterprise-like ranges, covering tunneling, privilege escalation, credential reuse, lateral movement, persistence, and defense evasion.
+      <br><br>
+      <strong>📦 Complete dataset: this GitHub repository releases only a subset of PostExploitBench. The complete dataset is available on <a href="https://huggingface.co/datasets/AgentCyberRange/PostExploitBench">Hugging Face</a></strong>.
       <br><br>
     </td>
   </tr>
