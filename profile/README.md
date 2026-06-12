@@ -1,5 +1,5 @@
 <p align="center">
-  <strong> 🎯 AgentCyberRange: Benchmarking AI Agents on Realistic Cyber Attacks </strong>
+  <strong> 🎯 AgentCyberRange: Benchmarking Frontier AI Systems in Realistic Cyber Ranges </strong>
 </p>
 
 <p align="center">
