@@ -115,9 +115,19 @@ Most user and developer documentation lives in [`CAGE`](https://github.com/Agent
 
 ---
 
-## About Us
-Nuwa Frontier AI Safety Lab
-http://whitzard.tech/nuwa
+## Citation
+If you use this project in your research, please cite:
+```
+@misc{liu2026agentcyberrange,
+  title={AgentCyberRange: Benchmarking Frontier {AI} Systems in Realistic Cyber Ranges},
+  author={Fengyu Liu and Jiarun Dai and Yihe Fan and Wuyuao Mai and Ziao Li and Bofei Chen and Jie Zhang and Zheng Lou and Bocheng Xiang and Qiyi Zhang and Xudong Pan and Geng Hong and Yuan Zhang and Min Yang},
+  year={2026},
+  eprint={2606.14295},
+  archivePrefix={arXiv},
+  primaryClass={cs.CR},
+  url={https://arxiv.org/abs/2606.14295}
+}
+```
 
 --- 
 
