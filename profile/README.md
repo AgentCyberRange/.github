@@ -23,7 +23,7 @@ AgentCyberRange is an open-source project for evaluating AI agents on realistic 
 - ⚙️ **CAGE**: parallel evaluation infrastructure for running agents, benchmarks, and verifiers at scale.
 
 <p align="center">
-  <img src="./assets/overview.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
+  <img src="./assets/overview.png" alt="Comparison with existing cybersecurity benchmarks" width="700">
 </p>
 
 ## Why AgentCyberRange?
@@ -31,7 +31,7 @@ AgentCyberRange is an open-source project for evaluating AI agents on realistic 
 Most benchmarks stop at one checkpoint. AgentCyberRange follows the attack path: find the web entry, exploit it, use the foothold, and move through the internal range. CAGE makes this path measurable at scale through parallel, isolated, and verifiable agent runs.
 
 <p align="center">
-  <img src="./assets/compare.png" alt="Comparison with existing cybersecurity benchmarks" width="845">
+  <img src="./assets/compare.png" alt="Comparison with existing cybersecurity benchmarks" width="700">
 </p>
 
 ---
@@ -42,7 +42,7 @@ Most benchmarks stop at one checkpoint. AgentCyberRange follows the attack path:
 AgentCyberRange evaluates AI agents across two realistic cyber-attack tasks: web-facing exploitation and internal post-exploitation. The benchmark uses multiple difficulty levels to measure how agents perform with different amounts of task information.
 
 <p align="center">
-  <img src="./assets/main_result.png" alt="Agent performance on WebExploitBench and PostExploitBench" width="845">
+  <img src="./assets/main_result.png" alt="Agent performance on WebExploitBench and PostExploitBench" width="750">
 </p>
 
 The results show that frontier agents can already solve a non-trivial fraction of realistic cyber-attack tasks, especially when given more task-specific information. However, success rates remain far from complete, indicating that reliable end-to-end autonomous compromise is still challenging.
